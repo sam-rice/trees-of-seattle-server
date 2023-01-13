@@ -24,13 +24,15 @@ app.get("/v1/trees", (req, res) => {
 })
 
 app.post("/v1/trees", (req, res) => {
-  const requiredParams = ["id", "speciesCommon", "speciesSci", "height", "circ", "age", "author", "img", "address", "neighborhood", "lat", "long"]
-  const newTree = req.body
-  console.log(newTree)
+  const requiredParams = ["speciesCommon", "speciesSci", "height", "circ", "age", "author", "img", "address", "neighborhood", "lat", "long"]
+  const newTree = {
+    id: Date.now(),
+    ...req.body
+  }
 
   for (let requiredParam of requiredParams) {
-    if(!newTree[requiredParam]) {
-      return res.status(422).json({message: `You are missing a required parameter of ${requiredParam}`})
+    if (!newTree[requiredParam]) {
+      return res.status(422).json({ message: `You are missing a required parameter of ${requiredParam}` })
     }
     trees = [...trees, newTree]
     return res.status(201).json(newTree)
