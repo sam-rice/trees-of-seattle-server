@@ -10,5 +10,7 @@ const knexfile = require("./knexfile")
 // instead decide with env vars which config to use
 
  const db = knex(knexfile.production)
+//  const db = knex(knexfile.development) -- previously this
+
 
  module.exports = db
