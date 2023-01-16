@@ -13,4 +13,4 @@ const knexfile = require("./knexfile")
 //  const db = knex(knexfile.development) -- previously this
 
 
- module.exports = db
+//  module.exports = db
