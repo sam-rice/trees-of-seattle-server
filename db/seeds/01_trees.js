@@ -6,7 +6,6 @@ exports.seed = async function (knex) {
   await knex("trees").del()
   await knex("trees").insert([
     {
-      id: 1,
       species_common: "Madrona",
       species_sci: "Arbutus menziesii",
       is_native: true,
@@ -21,7 +20,6 @@ exports.seed = async function (knex) {
       long: -122.288648
     },
     {
-      id: 2,
       species_common: "Himalayan Cedar",
       species_sci: "Cedrus deodara",
       is_native: false,
@@ -36,7 +34,6 @@ exports.seed = async function (knex) {
       long: -122.306720
     },
     {
-      id: 3,
       species_common: "Douglas Fir",
       species_sci: "Pseudotsuga menziesii",
       is_native: true,
@@ -51,7 +48,6 @@ exports.seed = async function (knex) {
       long: -122.372400
     },
     {
-      id: 4,
       species_common: "Red Alder",
       species_sci: "Alnus rubra",
       is_native: true,
