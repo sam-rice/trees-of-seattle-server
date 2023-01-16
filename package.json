@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "migrate": "npx knex migrate:latest --knexfile db/knexfile.js",
+    "rollback": "npx knex migrate:rollback --knexfile ./db/knexfile.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
     "build": "./node_modules/.bin/netlify-lambda build src"

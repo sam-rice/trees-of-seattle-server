@@ -12,8 +12,9 @@ class TreesController {
   }
 
   async createTree(req, res) {
-    const requiredParams = ["speciesCommon", "speciesSci", "isNative", "address", "age", "author", "lat", "long"]
-    //UPDATE THIS TO LOSE UNREQUIRED FIELDS
+
+    const requiredParams = ["speciesCommon", "speciesSci", "address", "age", "author", "lat", "long"]
+    console.log(req.body)
     for (let requiredParam of requiredParams) {
       if (!req.body[requiredParam]) {
         return res.status(422).json({ message: `You are missing a required parameter of "${requiredParam}".` })
