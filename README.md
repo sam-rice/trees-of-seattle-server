@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
 </p>
 
-This is the repository for the server created for use with the [Trees of Seattle](https://github.com/sam-rice/trees-of-seattle) project. The server is built on Node.js/Express, with Knex.js middleware connecting to a PostgreSQL database. The server is currently deployed via Heroku.
+This is the repository for the RESTful API created for use with the [Trees of Seattle](https://github.com/sam-rice/trees-of-seattle) project. The server is built on Node.js/Express, with Knex.js middleware connecting to a PostgreSQL database. The server is currently deployed via Heroku.
 
 ## API Reference
 
